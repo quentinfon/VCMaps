@@ -19,25 +19,27 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="525dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
         android:background="@color/vertC"
-        android:layout_marginTop="15dp">
+        android:layout_weight="20">
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            >
 
             <Button
                 android:id="@+id/testMaps"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Maps"
                 android:layout_gravity="center"
                 android:layout_marginLeft="50dp"
                 android:layout_marginRight="50dp"
-                android:textSize="@dimen/titre"/>
+                android:text="Maps"
+                android:textSize="@dimen/titre" />
         </LinearLayout>
     </ScrollView>
 
@@ -46,7 +48,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:layout_weight="1"
         android:background="@color/vertC"
-        app:srcCompat="@drawable/icon_ajout"
-        />
+        app:srcCompat="@drawable/icon_ajout" />
 </LinearLayout>
