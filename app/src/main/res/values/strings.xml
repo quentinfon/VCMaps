@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">VCMaps</string>
-    <string name="pas_de_destinations">Aucun lieux enregistrer</string>
+    <string name="pas_de_destinations">No places save</string>
 </resources>
