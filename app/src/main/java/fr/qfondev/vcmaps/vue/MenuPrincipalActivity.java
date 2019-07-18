@@ -106,6 +106,8 @@ public class MenuPrincipalActivity extends AppCompatActivity {
     private void ajouterUnBouton(String nom, final String lat, final String lon){
         Button btn = new Button(this);
         btn.setText(nom);
+        btn.setBackground(getResources().getDrawable(R.drawable.design_btn));
+        btn.setTextSize(30);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/vertC">
+    android:background="@color/fond">
 
     <TextView
         android:id="@+id/nomAppTxt"
@@ -22,14 +22,19 @@
         android:layout_height="match_parent"
         android:layout_marginTop="15dp"
         android:layout_weight="50"
-        android:background="@color/vertC">
+        android:background="@color/fond">
 
 
         <LinearLayout
             android:id="@+id/conteneurBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:showDividers="middle"
+            android:divider="@drawable/espace"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp">
 
 
         </LinearLayout>
@@ -37,12 +42,14 @@
 
     <ImageButton
         android:id="@+id/ajouterBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="5dp"
         android:layout_weight="1"
-        android:background="@color/vertC"
-        app:srcCompat="@drawable/icon_ajout" />
+        app:srcCompat="@mipmap/ic_plus"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="right"
+        android:adjustViewBounds="true"
+        android:background="@color/fond"
+        android:scaleType="fitCenter"/>
 </LinearLayout>
