@@ -74,7 +74,7 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Qu
 activity#fr.qfondev.vcmaps.vue.StartingActivity
 ADDED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:15:9-24:20
 	android:label
-		ADDED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:16:13-50
+		ADDED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:16:13-45
 	android:name
 		ADDED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:15:19-55
 intent-filter#action:name:android.intent.action.MAIN+action:name:android.intent.action.VIEW+category:name:android.intent.category.LAUNCHER
@@ -92,9 +92,9 @@ ADDED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManif
 	android:name
 		ADDED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:21:27-74
 activity#fr.qfondev.vcmaps.vue.MenuPrincipalActivity
-ADDED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:26:9-27:45
+ADDED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:26:9-27:47
 	android:label
-		ADDED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:27:13-43
+		ADDED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:27:13-45
 	android:name
 		ADDED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:26:19-60
 uses-sdk
