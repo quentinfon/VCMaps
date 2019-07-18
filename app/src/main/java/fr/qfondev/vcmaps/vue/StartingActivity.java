@@ -28,4 +28,6 @@ public class StartingActivity extends AppCompatActivity {
 
         new Handler().postDelayed(runnable,2000);
     }
+
+
 }

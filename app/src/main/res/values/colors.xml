@@ -6,5 +6,6 @@
     <color name="vertC">#33D9B2</color>
     <color name="vertF">#218C74</color>
     <color name="grisC">#d1ccc0</color>
-    <color name="grisF">#84817a</color>
+    <color name="grisF">#585858</color>
+    <color name="fond">#ecf0f1</color>
 </resources>

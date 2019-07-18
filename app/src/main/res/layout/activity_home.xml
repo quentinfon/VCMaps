@@ -21,26 +21,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="15dp"
-        android:background="@color/vertC"
-        android:layout_weight="20">
+        android:layout_weight="50"
+        android:background="@color/vertC">
 
 
         <LinearLayout
             android:id="@+id/conteneurBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
 
-            <Button
-                android:id="@+id/testMaps"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="50dp"
-                android:layout_marginRight="50dp"
-                android:text="Maps"
-                android:textSize="@dimen/titre" />
+
         </LinearLayout>
     </ScrollView>
 

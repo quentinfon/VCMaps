@@ -15,11 +15,11 @@
 11-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:5:22-64
 12
 13    <application
-13-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:7:5-29:19
+13-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:7:5-37:19
 14        android:allowBackup="true"
 14-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:8:9-35
 15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-15-->[androidx.core:core:1.0.1] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\c9abde3d00d5c35e349279d839666d3e\core-1.0.1\AndroidManifest.xml:22:18-86
+15-->[androidx.core:core:1.0.1] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\848d7ae98cf87e77632ecc4f8c64694e\core-1.0.1\AndroidManifest.xml:22:18-86
 16        android:debuggable="true"
 17        android:icon="@mipmap/ic_launcher"
 17-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:9:9-43
@@ -53,11 +53,22 @@
 31            </intent-filter>
 32        </activity>
 33        <activity
-33-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:26:9-27:47
+33-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:26:9-29:20
 34            android:name="fr.qfondev.vcmaps.vue.MenuPrincipalActivity"
 34-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:26:19-60
-35            android:label="@string/app_name" />
+35            android:label="@string/app_name" >
 35-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:27:13-45
-36    </application>
-37
-38</manifest>
+36        </activity>
+37        <activity android:name="fr.qfondev.vcmaps.vue.AjoutLieuxActivity" >
+37-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:31:9-35:20
+37-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:31:19-57
+38            <intent-filter>
+38-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:32:13-34:29
+39                <action android:name="android.intent.action.SEARCH" />
+39-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:33:17-71
+39-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:33:25-68
+40            </intent-filter>
+41        </activity>
+42    </application>
+43
+44</manifest>

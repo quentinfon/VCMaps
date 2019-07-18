@@ -1,60 +1,129 @@
 package fr.qfondev.vcmaps.vue;
 
+import android.content.Context;
 import android.content.Intent;
+import android.location.Address;
+import android.location.Geocoder;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 
 import fr.qfondev.vcmaps.R;
 
 import static android.app.PendingIntent.getActivity;
 
-public class MenuPrincipalActivity extends AppCompatActivity implements View.OnClickListener {
+public class MenuPrincipalActivity extends AppCompatActivity {
 
     private Button mapsBtn;
     private ImageButton ajouterBtn;
     private LinearLayout buttonContainer;
+    private TextView test;
+    private File mFile = null;
+    public static final String FICHIER = "lieux.txt";
+    public static ArrayList<String> listeLieux;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+
+        ajouterBtn = (ImageButton) findViewById(R.id.ajouterBtn);
         buttonContainer = (LinearLayout) findViewById(R.id.conteneurBtn);
+        listeLieux = new ArrayList<String>();
 
-        mapsBtn = (Button)findViewById(R.id.testMaps);
+        mFile = new File(Environment.getExternalStorageDirectory().getPath() + "/Android/data/ " + getPackageName() + "/files/" + FICHIER);
 
-        mapsBtn.setOnClickListener(new View.OnClickListener(){
+
+        ajouterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String latitude = "49.0593";
-                String longitude = "-1.244730000000004";
-                Uri gmmIntentUri = Uri.parse("google.navigation:q=" + latitude + "," + longitude);
+                Intent main = new Intent(getApplicationContext(),AjoutLieuxActivity.class);
+                startActivity(main);
+                finish();
+            }
+        });
+
+
+        /*Recuperation des lieux sauvegarder*/
+        try {
+            StringBuilder text = new StringBuilder();
+            FileInputStream fis = this.openFileInput(FICHIER);
+            BufferedReader br = new BufferedReader(new InputStreamReader(new BufferedInputStream(fis)));
+            String line;
+            while ((line = br.readLine()) != null) {
+                listeLieux.add(line);
+                System.out.println(line);
+            }
+            br.close();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        affichage();
+
+
+
+    }
+
+    private void affichage(){ ;
+
+        for (int i = 0; i <listeLieux.size(); i++){
+
+            String[] infos = listeLieux.get(i).split("#");
+
+            try{
+                ajouterUnBouton(infos[0], infos[1], infos[2]);
+            }catch (Exception e){
+                System.out.println("CRAAAAASSSHHHHH");
+            }
+        }
+
+    }
+
+    private void ajouterUnBouton(String nom, final String lat, final String lon){
+        Button btn = new Button(this);
+        btn.setText(nom);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri gmmIntentUri = Uri.parse("google.navigation:q=" + lat + "," + lon);
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
 
-                try{
+                try {
                     startActivity(mapIntent);
-                }catch (Exception e){
+                } catch (Exception e) {
                 }
             }
         });
 
-        ajouterBtn = (ImageButton)findViewById(R.id.ajouterBtn);
-
-        ajouterBtn.setOnClickListener(this);
+        buttonContainer.addView(btn);
 
     }
 
-    @Override
-    public void onClick(View view) {
-        Button button = new Button(this);
-        button.setText("test");
-        buttonContainer.addView(button);
-    }
+
 }
