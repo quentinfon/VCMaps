@@ -25,6 +25,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,7 +36,7 @@ import static android.app.PendingIntent.getActivity;
 public class MenuPrincipalActivity extends AppCompatActivity {
 
     private Button mapsBtn;
-    private ImageButton ajouterBtn;
+    private ImageButton ajouterBtn, suppBtn;
     private LinearLayout buttonContainer;
     private TextView test;
     private File mFile = null;
@@ -49,6 +50,7 @@ public class MenuPrincipalActivity extends AppCompatActivity {
 
 
         ajouterBtn = (ImageButton) findViewById(R.id.ajouterBtn);
+        suppBtn = (ImageButton) findViewById(R.id.supprimerBtn);
         buttonContainer = (LinearLayout) findViewById(R.id.conteneurBtn);
         listeLieux = new ArrayList<String>();
 
@@ -60,9 +62,17 @@ public class MenuPrincipalActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent main = new Intent(getApplicationContext(),AjoutLieuxActivity.class);
                 startActivity(main);
-                finish();
             }
         });
+
+        suppBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent suppActy = new Intent(getApplicationContext(),SuppressionLieuxActivity.class);
+                startActivity(suppActy);
+            }
+        });
+
 
 
         /*Recuperation des lieux sauvegarder*/
@@ -85,6 +95,28 @@ public class MenuPrincipalActivity extends AppCompatActivity {
         affichage();
 
 
+
+    }
+
+    public static void enregistrerLieux(Context ctx){
+
+        String tousLesLieux = "";
+        for(String lieu: MenuPrincipalActivity.listeLieux){
+            tousLesLieux += lieu;
+            tousLesLieux+="\n";
+        }
+
+        File mydir = ctx.getFilesDir(); //get your internal directory
+        File myFile = new File(mydir, FICHIER);
+        myFile.delete();
+
+        try {
+            FileOutputStream outputStream = ctx.openFileOutput(MenuPrincipalActivity.FICHIER, Context.MODE_PRIVATE);
+            outputStream.write(tousLesLieux.getBytes());
+            outputStream.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 

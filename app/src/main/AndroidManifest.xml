@@ -28,5 +28,7 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".vue.SuppressionLieuxActivity"/>
+
     </application>
 </manifest>

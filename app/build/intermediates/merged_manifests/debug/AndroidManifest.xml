@@ -35,6 +35,7 @@
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
         </activity>
+        <activity android:name="fr.qfondev.vcmaps.vue.SuppressionLieuxActivity" />
     </application>
 
 </manifest>

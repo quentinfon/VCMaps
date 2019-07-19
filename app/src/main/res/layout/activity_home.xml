@@ -19,7 +19,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="500dp"
         android:layout_marginTop="15dp"
         android:layout_weight="50"
         android:background="@color/fond">
@@ -29,27 +29,43 @@
             android:id="@+id/conteneurBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:showDividers="middle"
-            android:divider="@drawable/espace"
             android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
-            android:layout_marginTop="20dp">
+            android:divider="@drawable/espace"
+            android:orientation="vertical"
+            android:showDividers="middle">
 
 
         </LinearLayout>
     </ScrollView>
 
-    <ImageButton
-        android:id="@+id/ajouterBtn"
-        android:layout_marginTop="15dp"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
-        android:layout_weight="1"
-        app:srcCompat="@mipmap/ic_plus"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_gravity="right"
-        android:adjustViewBounds="true"
-        android:background="@color/fond"
-        android:scaleType="fitCenter"/>
+        android:layout_weight="1">
+
+        <ImageButton
+            android:id="@+id/ajouterBtn"
+            android:layout_weight="1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="right"
+            android:adjustViewBounds="true"
+            android:background="@color/fond"
+            app:srcCompat="@mipmap/ic_plus" />
+
+        <ImageButton
+            android:id="@+id/supprimerBtn"
+            android:layout_weight="1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="left"
+            android:adjustViewBounds="true"
+            android:background="@color/fond"
+            app:srcCompat="@mipmap/ic_supp" />
+
+    </LinearLayout>
+
 </LinearLayout>

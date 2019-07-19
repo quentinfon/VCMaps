@@ -58,23 +58,7 @@ public class AjoutLieuxActivity extends AppCompatActivity {
             String nouvelleAdresse = nomL+"#"+adresse.getLatitude()+"#"+adresse.getLongitude();
             MenuPrincipalActivity.listeLieux.add(nouvelleAdresse);
 
-            System.out.println("AJOUT DE :");
-            System.out.println(MenuPrincipalActivity.listeLieux);
-
-            String tousLesLieux = "";
-            for(String lieu: MenuPrincipalActivity.listeLieux){
-                tousLesLieux += lieu;
-                tousLesLieux+="\n";
-            }
-
-
-            try {
-                FileOutputStream outputStream = openFileOutput(MenuPrincipalActivity.FICHIER, Context.MODE_PRIVATE);
-                outputStream.write(tousLesLieux.getBytes());
-                outputStream.close();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            MenuPrincipalActivity.enregistrerLieux(this);
 
             Intent main = new Intent(getApplicationContext(),MenuPrincipalActivity.class);
             startActivity(main);

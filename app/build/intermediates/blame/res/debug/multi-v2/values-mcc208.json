@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-mcc208\\values-mcc208.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\src\\main\\res\\values-mcc208\\strings.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "57,102",
+                        "endColumns": "43,71",
+                        "endOffsets": "96,169"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,99",
+                        "endColumns": "43,71",
+                        "endOffsets": "94,166"
+                    }
+                }
+            ]
+        }
+    ]
+}
