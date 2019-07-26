@@ -139,7 +139,11 @@ public class SuppressionLieuxActivity extends AppCompatActivity {
     protected void onPause(){
         retourNav.setVisibility(View.GONE);
         super.onPause();
-        finish();
+    }
+
+    protected void onResume(){
+        retourNav.setVisibility(View.VISIBLE);
+        super.onResume();
     }
 
 }

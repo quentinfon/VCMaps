@@ -13,58 +13,79 @@
 11    <uses-permission android:name="android.permission.INTERNET" />
 11-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:5:5-67
 11-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:5:22-64
-12
-13    <application
-13-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:7:5-33:19
-14        android:allowBackup="true"
-14-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:8:9-35
-15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-15-->[androidx.core:core:1.0.1] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\848d7ae98cf87e77632ecc4f8c64694e\core-1.0.1\AndroidManifest.xml:22:18-86
-16        android:debuggable="true"
-17        android:icon="@mipmap/ic_launcher"
-17-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:9:9-43
-18        android:label="@string/app_name"
-18-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:10:9-41
-19        android:roundIcon="@mipmap/ic_launcher_round"
-19-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:11:9-54
-20        android:supportsRtl="true"
-20-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:12:9-35
-21        android:testOnly="true"
-22        android:theme="@style/ThemeDeLAppli" >
-22-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:13:9-45
-23        <activity
-23-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:15:9-23:20
-24            android:name="fr.qfondev.vcmaps.vue.MenuPrincipalActivity"
-24-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:15:19-60
-25            android:label="@string/app_name" >
-25-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:16:13-45
-26            <intent-filter>
-26-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:17:13-21:29
-27                <action android:name="android.intent.action.MAIN" />
-27-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:18:17-69
-27-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:18:25-66
-28                <action android:name="android.intent.action.VIEW" />
-28-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:19:17-69
-28-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:19:25-66
-29
-30                <category android:name="android.intent.category.LAUNCHER" />
-30-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:20:17-77
-30-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:20:27-74
-31            </intent-filter>
-32        </activity>
-33        <activity android:name="fr.qfondev.vcmaps.vue.AjoutLieuxActivity" >
-33-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:25:9-29:20
-33-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:25:19-57
-34            <intent-filter>
-34-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:26:13-28:29
-35                <action android:name="android.intent.action.SEARCH" />
-35-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:27:17-71
-35-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:27:25-68
-36            </intent-filter>
-37        </activity>
-38        <activity android:name="fr.qfondev.vcmaps.vue.SuppressionLieuxActivity" />
-38-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:31:9-65
-38-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:31:19-63
-39    </application>
-40
-41</manifest>
+12    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+12-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:6:5-79
+12-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:6:22-76
+13    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+13-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:7:5-81
+13-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:7:22-78
+14
+15    <application
+15-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:9:5-35:19
+16        android:allowBackup="true"
+16-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:10:9-35
+17        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+17-->[androidx.core:core:1.0.1] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\848d7ae98cf87e77632ecc4f8c64694e\core-1.0.1\AndroidManifest.xml:22:18-86
+18        android:debuggable="true"
+19        android:icon="@mipmap/ic_launcher"
+19-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:11:9-43
+20        android:label="@string/app_name"
+20-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:12:9-41
+21        android:roundIcon="@mipmap/ic_launcher_round"
+21-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:13:9-54
+22        android:supportsRtl="true"
+22-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:14:9-35
+23        android:testOnly="true"
+24        android:theme="@style/ThemeDeLAppli" >
+24-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:15:9-45
+25        <activity
+25-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:17:9-25:20
+26            android:name="fr.qfondev.vcmaps.vue.MenuPrincipalActivity"
+26-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:17:19-60
+27            android:label="@string/app_name" >
+27-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:18:13-45
+28            <intent-filter>
+28-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:19:13-23:29
+29                <action android:name="android.intent.action.MAIN" />
+29-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:20:17-69
+29-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:20:25-66
+30                <action android:name="android.intent.action.VIEW" />
+30-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:21:17-69
+30-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:21:25-66
+31
+32                <category android:name="android.intent.category.LAUNCHER" />
+32-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:22:17-77
+32-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:22:27-74
+33            </intent-filter>
+34        </activity>
+35        <activity android:name="fr.qfondev.vcmaps.vue.AjoutLieuxActivity" >
+35-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:27:9-31:20
+35-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:27:19-57
+36            <intent-filter>
+36-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:28:13-30:29
+37                <action android:name="android.intent.action.SEARCH" />
+37-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:29:17-71
+37-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:29:25-68
+38            </intent-filter>
+39        </activity>
+40        <activity android:name="fr.qfondev.vcmaps.vue.SuppressionLieuxActivity" />
+40-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:33:9-65
+40-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:33:19-63
+41        <activity
+41-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\dad44d13e41bee5d6081e831544cc991\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+42            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+42-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\dad44d13e41bee5d6081e831544cc991\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+43            android:exported="false"
+43-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\dad44d13e41bee5d6081e831544cc991\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+44            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+44-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\dad44d13e41bee5d6081e831544cc991\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+45
+46        <meta-data
+46-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\8a496b107e1a1a2fef9d8cb5cc3a4b85\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+47            android:name="com.google.android.gms.version"
+47-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\8a496b107e1a1a2fef9d8cb5cc3a4b85\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+48            android:value="@integer/google_play_services_version" />
+48-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\8a496b107e1a1a2fef9d8cb5cc3a4b85\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+49    </application>
+50
+51</manifest>
