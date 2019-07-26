@@ -11,6 +11,8 @@ anim abc_slide_out_bottom
 anim abc_slide_out_top
 anim abc_tooltip_enter
 anim abc_tooltip_exit
+anim fade_in
+anim fade_out
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -316,6 +318,7 @@ color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
 color background_material_light
+color bleuC
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -599,6 +602,7 @@ drawable notify_panel_notification_icon_bg
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable white_border
+font comfortaaregular
 id ALT
 id CTRL
 id FUNCTION
@@ -682,8 +686,6 @@ id message
 id middle
 id multiply
 id never
-id nomAppTxt
-id nomAppTxtSupp
 id nomLieu
 id nomLieuTxt
 id none
@@ -691,6 +693,7 @@ id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id pageCrea
 id parentPanel
 id progress_circular
 id progress_horizontal
@@ -847,7 +850,7 @@ style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
 style Animation_AppCompat_DropDownUp
 style Animation_AppCompat_Tooltip
-style AppTheme
+style AnimationActivity
 style Base_AlertDialog_AppCompat
 style Base_AlertDialog_AppCompat_Light
 style Base_Animation_AppCompat_Dialog
@@ -1107,6 +1110,7 @@ style Theme_AppCompat_Light_Dialog_MinWidth
 style Theme_AppCompat_Light_DialogWhenLarge
 style Theme_AppCompat_Light_NoActionBar
 style Theme_AppCompat_NoActionBar
+style ThemeDeLAppli
 style ThemeOverlay_AppCompat
 style ThemeOverlay_AppCompat_ActionBar
 style ThemeOverlay_AppCompat_Dark

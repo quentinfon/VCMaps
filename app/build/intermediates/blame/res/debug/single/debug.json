@@ -4,6 +4,14 @@
         "source": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
+        "merged": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\build\\intermediates\\res\\merged\\debug\\anim_fade_out.xml.flat",
+        "source": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\src\\main\\res\\anim\\fade_out.xml"
+    },
+    {
+        "merged": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\build\\intermediates\\res\\merged\\debug\\anim_fade_in.xml.flat",
+        "source": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\src\\main\\res\\anim\\fade_in.xml"
+    },
+    {
         "merged": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_navigation.png.flat",
         "source": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_navigation.png"
     },
@@ -34,6 +42,10 @@
     {
         "merged": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_plus.png.flat",
         "source": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_plus.png"
+    },
+    {
+        "merged": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\build\\intermediates\\res\\merged\\debug\\font_comfortaaregular.ttf.flat",
+        "source": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\src\\main\\res\\font\\comfortaaregular.ttf"
     },
     {
         "merged": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",

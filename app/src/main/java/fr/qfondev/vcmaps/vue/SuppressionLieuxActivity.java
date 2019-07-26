@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -20,6 +21,9 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 import fr.qfondev.vcmaps.R;
 
@@ -28,7 +32,7 @@ public class SuppressionLieuxActivity extends AppCompatActivity {
     private ImageButton retourNav;
     private LinearLayout buttonContainer;
     private File mFile = null;
-    private ArrayList<String> lieuxSupp;
+    private List<String> lieuxSupp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,8 +49,6 @@ public class SuppressionLieuxActivity extends AppCompatActivity {
         retourNav.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent main = new Intent(getApplicationContext(),MenuPrincipalActivity.class);
-                startActivity(main);
                 finish();
             }
         });
@@ -74,7 +76,18 @@ public class SuppressionLieuxActivity extends AppCompatActivity {
 
     }
 
-    private void affichage(){ ;
+    private void trierAlpab(){
+        Collections.sort(lieuxSupp, new Comparator<String>() {
+            @Override
+            public int compare(String s1, String s2) {
+                return s1.compareToIgnoreCase(s2);
+            }
+        });
+    }
+
+    private void affichage(){
+
+        trierAlpab();
 
         for (int i = 0; i < lieuxSupp.size(); i++){
 
@@ -112,8 +125,7 @@ public class SuppressionLieuxActivity extends AppCompatActivity {
 
                 MenuPrincipalActivity.listeLieux.remove(aRetirer);
                 MenuPrincipalActivity.enregistrerLieux(ctx);
-                Intent menu = new Intent(getApplicationContext(),MenuPrincipalActivity.class);
-                startActivity(menu);
+                MenuPrincipalActivity.affichage(MenuPrincipalActivity.MenuContext);
                 finish();
 
 
@@ -124,5 +136,10 @@ public class SuppressionLieuxActivity extends AppCompatActivity {
 
     }
 
+    protected void onPause(){
+        retourNav.setVisibility(View.GONE);
+        super.onPause();
+        finish();
+    }
 
 }

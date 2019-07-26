@@ -2,6 +2,7 @@ package fr.qfondev.vcmaps.vue;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.location.Address;
 import android.location.Geocoder;
 import android.net.Uri;
@@ -26,7 +27,10 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import fr.qfondev.vcmaps.R;
@@ -37,17 +41,18 @@ public class MenuPrincipalActivity extends AppCompatActivity {
 
     private Button mapsBtn;
     private ImageButton ajouterBtn, suppBtn;
-    private LinearLayout buttonContainer;
+    public static LinearLayout buttonContainer;
     private TextView test;
     private File mFile = null;
     public static final String FICHIER = "lieux.txt";
-    public static ArrayList<String> listeLieux;
+    public static List<String> listeLieux;
+    public static Context MenuContext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
+        MenuContext = this;
 
         ajouterBtn = (ImageButton) findViewById(R.id.ajouterBtn);
         suppBtn = (ImageButton) findViewById(R.id.supprimerBtn);
@@ -60,16 +65,19 @@ public class MenuPrincipalActivity extends AppCompatActivity {
         ajouterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent main = new Intent(getApplicationContext(),AjoutLieuxActivity.class);
+                Intent main = new Intent(MenuPrincipalActivity.this,AjoutLieuxActivity.class);
                 startActivity(main);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+
             }
         });
 
         suppBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent suppActy = new Intent(getApplicationContext(),SuppressionLieuxActivity.class);
+                Intent suppActy = new Intent(MenuPrincipalActivity.this,SuppressionLieuxActivity.class);
                 startActivity(suppActy);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
             }
         });
 
@@ -92,11 +100,22 @@ public class MenuPrincipalActivity extends AppCompatActivity {
         }
 
 
-        affichage();
+        affichage(this);
 
 
 
     }
+
+    public static void trierAlphabetiquement(){
+        Collections.sort(listeLieux, new Comparator<String>() {
+            @Override
+            public int compare(String s1, String s2) {
+                return s1.compareToIgnoreCase(s2);
+            }
+        });
+    }
+
+
 
     public static void enregistrerLieux(Context ctx){
 
@@ -120,26 +139,31 @@ public class MenuPrincipalActivity extends AppCompatActivity {
 
     }
 
-    private void affichage(){ ;
+    public static void affichage(Context ctx){
+
+        buttonContainer.removeAllViews();
+        trierAlphabetiquement();
 
         for (int i = 0; i <listeLieux.size(); i++){
 
             String[] infos = listeLieux.get(i).split("#");
 
             try{
-                ajouterUnBouton(infos[0], infos[1], infos[2]);
+                ajouterUnBouton(infos[0], infos[1], infos[2], ctx);
             }catch (Exception e){
-                System.out.println("CRAAAAASSSHHHHH");
+
             }
         }
 
     }
 
-    private void ajouterUnBouton(String nom, final String lat, final String lon){
-        Button btn = new Button(this);
+    public static void ajouterUnBouton(String nom, final String lat, final String lon, final Context ctx){
+        Button btn = new Button(ctx);
+        btn.setTypeface(Typeface.SANS_SERIF);
         btn.setText(nom);
-        btn.setBackground(getResources().getDrawable(R.drawable.design_btn));
+        btn.setBackground(ctx.getResources().getDrawable(R.drawable.design_btn));
         btn.setTextSize(30);
+
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -149,7 +173,7 @@ public class MenuPrincipalActivity extends AppCompatActivity {
                 mapIntent.setPackage("com.google.android.apps.maps");
 
                 try {
-                    startActivity(mapIntent);
+                    ctx.startActivity(mapIntent);
                 } catch (Exception e) {
                 }
             }

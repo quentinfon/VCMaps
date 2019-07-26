@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,6 +23,7 @@ public class AjoutLieuxActivity extends AppCompatActivity {
 
     private EditText rechercheLieu, nomLieu;
     private ImageButton validerLieu;
+    private LinearLayout page;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +32,7 @@ public class AjoutLieuxActivity extends AppCompatActivity {
         rechercheLieu = (EditText) findViewById(R.id.input_rechercheLieu);
         nomLieu = (EditText) findViewById(R.id.nomLieu);
         validerLieu = (ImageButton) findViewById(R.id.imgValidation);
+        page = (LinearLayout) findViewById(R.id.pageCrea);
 
         validerLieu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,11 +62,16 @@ public class AjoutLieuxActivity extends AppCompatActivity {
             MenuPrincipalActivity.listeLieux.add(nouvelleAdresse);
 
             MenuPrincipalActivity.enregistrerLieux(this);
-
-            Intent main = new Intent(getApplicationContext(),MenuPrincipalActivity.class);
-            startActivity(main);
+            MenuPrincipalActivity.affichage(MenuPrincipalActivity.MenuContext);
             finish();
 
         }
+    }
+
+    protected void onPause(){
+
+        page.setVisibility(View.GONE);
+        super.onPause();
+        finish();
     }
 }
