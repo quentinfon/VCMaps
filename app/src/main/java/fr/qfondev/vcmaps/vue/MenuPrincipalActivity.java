@@ -3,53 +3,36 @@ package fr.qfondev.vcmaps.vue;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
-import android.location.Address;
-import android.location.Geocoder;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
-import android.view.KeyEvent;
 import android.view.View;
-import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
-import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
 import fr.qfondev.vcmaps.R;
+import fr.qfondev.vcmaps.modele.GroupeBDD;
 import fr.qfondev.vcmaps.modele.MyDatabaseHelper;
 import fr.qfondev.vcmaps.modele.RepereLieux;
 
-import static android.app.PendingIntent.getActivity;
 
 public class MenuPrincipalActivity extends AppCompatActivity {
 
     private Button mapsBtn;
     private ImageButton ajouterBtn, suppBtn;
     public static LinearLayout buttonContainer;
-    private TextView test;
-    private File mFile = null;
     public static final String FICHIER = "lieux.txt";
     public static List<RepereLieux> listeLieux;
     public static Context MenuContext;
     public static MyDatabaseHelper db;
+    public static GroupeBDD groupeBd;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,10 +45,12 @@ public class MenuPrincipalActivity extends AppCompatActivity {
         buttonContainer = (LinearLayout) findViewById(R.id.conteneurBtn);
         listeLieux = new ArrayList<RepereLieux>();
 
+        /*Definition des Bases de donées*/
         if(db == null)
             db = new MyDatabaseHelper(this);
+        if(groupeBd == null)
+            groupeBd = new GroupeBDD(this);
 
-        mFile = new File(Environment.getExternalStorageDirectory().getPath() + "/Android/data/ " + getPackageName() + "/files/" + FICHIER);
 
 
         ajouterBtn.setOnClickListener(new View.OnClickListener() {

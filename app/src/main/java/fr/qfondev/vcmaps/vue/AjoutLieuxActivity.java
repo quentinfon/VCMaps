@@ -12,6 +12,7 @@ import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -43,6 +44,7 @@ import java.util.List;
 import java.util.SimpleTimeZone;
 
 import fr.qfondev.vcmaps.R;
+import fr.qfondev.vcmaps.modele.GroupeRepere;
 import fr.qfondev.vcmaps.modele.RepereLieux;
 
 public class AjoutLieuxActivity extends AppCompatActivity {
@@ -57,10 +59,10 @@ public class AjoutLieuxActivity extends AppCompatActivity {
     private static Location position;
     private FusedLocationProviderClient fusedLocationClient;
     public static Spinner listeGroupeW;
-    public static ArrayList<String> listeGroupes;
+    public static List<GroupeRepere> listeGroupes;
     private Button ajoutGroupe;
-    public static final String FICHIERGOUPES = "groupes.txt";
     public static Context ctx;
+    private static ArrayList<String> nomGrp;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -170,68 +172,26 @@ public class AjoutLieuxActivity extends AppCompatActivity {
         });
 
 
-        initialisationGroupes(AjoutLieuxActivity.this);
+        initialisationGroupes();
     }
 
-    public static void initialisationGroupes(Context ctx){
+    public static void initialisationGroupes(){
 
-        listeGroupes = new ArrayList<String>();
+        listeGroupes = new ArrayList<GroupeRepere>();
+        nomGrp = new ArrayList<String>();
 
         /*Recuperation des groupes sauvegarder*/
-        try {
-            StringBuilder text = new StringBuilder();
-            FileInputStream fis = ctx.openFileInput(FICHIERGOUPES);
-            BufferedReader br = new BufferedReader(new InputStreamReader(new BufferedInputStream(fis)));
-            String line;
-            while ((line = br.readLine()) != null) {
+        listeGroupes = MenuPrincipalActivity.groupeBd.getAllGroupes();
 
-                String groupNom = line;
-
-                listeGroupes.add(groupNom);
-
-            }
-            br.close();
-            fis.close();
-        }
-        catch (IOException e) {
-            e.printStackTrace();
+        for (GroupeRepere gR: listeGroupes){
+            nomGrp.add(gR.getNom());
         }
 
-        for (RepereLieux repere: MenuPrincipalActivity.listeLieux) {
 
-            if (listeGroupes.indexOf(repere.getGroupe()) == -1){
-                listeGroupes.add(repere.getGroupe());
-                System.out.println("Ajout de "+repere.getGroupe());
-            }
-
-        }
-
-        ArrayAdapter<String> adp = new ArrayAdapter<String>(ctx,
-                android.R.layout.simple_list_item_1, listeGroupes);
+        ArrayAdapter<String> adp = new ArrayAdapter<String>(AjoutLieuxActivity.ctx,
+                android.R.layout.simple_list_item_1, nomGrp);
         adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         listeGroupeW.setAdapter(adp);
-
-    }
-
-    public static void enregistrerGroupes(Context ctx){
-
-        String tousLesGroupes = "";
-        for(String nomGrp: AjoutLieuxActivity.listeGroupes){
-            tousLesGroupes += nomGrp;
-            tousLesGroupes+="\n";
-        }
-
-        File mydir = ctx.getFilesDir(); //get your internal directory
-        File myFile = new File(mydir, FICHIERGOUPES);
-        myFile.delete();
-
-        try {
-            FileOutputStream outputStream = ctx.openFileOutput(MenuPrincipalActivity.FICHIER, Context.MODE_PRIVATE);
-            outputStream.write(tousLesGroupes.getBytes());
-            outputStream.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
 
     }
 
