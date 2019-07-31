@@ -21,7 +21,7 @@
 13-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:7:22-78
 14
 15    <application
-15-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:9:5-35:19
+15-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:9:5-36:19
 16        android:allowBackup="true"
 16-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:10:9-35
 17        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -71,21 +71,24 @@
 40        <activity android:name="fr.qfondev.vcmaps.vue.SuppressionLieuxActivity" />
 40-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:33:9-65
 40-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:33:19-63
-41        <activity
-41-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\dad44d13e41bee5d6081e831544cc991\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
-42            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-42-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\dad44d13e41bee5d6081e831544cc991\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
-43            android:exported="false"
-43-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\dad44d13e41bee5d6081e831544cc991\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
-44            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-44-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\dad44d13e41bee5d6081e831544cc991\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
-45
-46        <meta-data
-46-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\8a496b107e1a1a2fef9d8cb5cc3a4b85\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
-47            android:name="com.google.android.gms.version"
-47-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\8a496b107e1a1a2fef9d8cb5cc3a4b85\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
-48            android:value="@integer/google_play_services_version" />
-48-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\8a496b107e1a1a2fef9d8cb5cc3a4b85\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
-49    </application>
-50
-51</manifest>
+41        <activity android:name="fr.qfondev.vcmaps.vue.AjoutGroupesActivity" />
+41-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:34:9-61
+41-->C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:34:19-59
+42        <activity
+42-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\dad44d13e41bee5d6081e831544cc991\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+43            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+43-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\dad44d13e41bee5d6081e831544cc991\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+44            android:exported="false"
+44-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\dad44d13e41bee5d6081e831544cc991\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+45            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+45-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\dad44d13e41bee5d6081e831544cc991\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+46
+47        <meta-data
+47-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\8a496b107e1a1a2fef9d8cb5cc3a4b85\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+48            android:name="com.google.android.gms.version"
+48-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\8a496b107e1a1a2fef9d8cb5cc3a4b85\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+49            android:value="@integer/google_play_services_version" />
+49-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\8a496b107e1a1a2fef9d8cb5cc3a4b85\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+50    </application>
+51
+52</manifest>

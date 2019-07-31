@@ -164,6 +164,10 @@
         "source": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_supp.png"
     },
     {
+        "merged": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_creation_groupe.xml.flat",
+        "source": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\src\\main\\res\\layout\\activity_creation_groupe.xml"
+    },
+    {
         "merged": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },

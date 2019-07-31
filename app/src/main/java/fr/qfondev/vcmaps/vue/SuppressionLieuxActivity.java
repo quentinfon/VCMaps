@@ -26,13 +26,14 @@ import java.util.Comparator;
 import java.util.List;
 
 import fr.qfondev.vcmaps.R;
+import fr.qfondev.vcmaps.modele.RepereLieux;
 
 public class SuppressionLieuxActivity extends AppCompatActivity {
 
     private ImageButton retourNav;
     private LinearLayout buttonContainer;
     private File mFile = null;
-    private List<String> lieuxSupp;
+    private List<RepereLieux> lieuxSupp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,22 +53,10 @@ public class SuppressionLieuxActivity extends AppCompatActivity {
                 finish();
             }
         });
-        lieuxSupp = new ArrayList<String>();
+        lieuxSupp = new ArrayList<RepereLieux>();
 
         /*Recuperation des lieux sauvegarder*/
-        try {
-            StringBuilder text = new StringBuilder();
-            FileInputStream fis = this.openFileInput(MenuPrincipalActivity.FICHIER);
-            BufferedReader br = new BufferedReader(new InputStreamReader(new BufferedInputStream(fis)));
-            String line;
-            while ((line = br.readLine()) != null) {
-                lieuxSupp.add(line);
-            }
-            br.close();
-        }
-        catch (IOException e) {
-            e.printStackTrace();
-        }
+        lieuxSupp = MenuPrincipalActivity.db.getAllLieux();
 
 
         affichage();
@@ -76,25 +65,23 @@ public class SuppressionLieuxActivity extends AppCompatActivity {
 
     }
 
-    private void trierAlpab(){
-        Collections.sort(lieuxSupp, new Comparator<String>() {
+    public void trierAlphabetiquement(){
+        Collections.sort(this.lieuxSupp, new Comparator<RepereLieux>() {
             @Override
-            public int compare(String s1, String s2) {
-                return s1.compareToIgnoreCase(s2);
+            public int compare(final RepereLieux repere1, final RepereLieux repere2) {
+                return repere1.getNom().compareTo(repere2.getNom());
             }
         });
     }
 
     private void affichage(){
 
-        trierAlpab();
+        trierAlphabetiquement();
 
-        for (int i = 0; i < lieuxSupp.size(); i++){
-
-            String[] infos = lieuxSupp.get(i).split("#");
+        for (int i = 0; i <lieuxSupp.size(); i++){
 
             try{
-                ajouterUnBouton(infos[0], infos[1], infos[2], this);
+                ajouterUnBouton(lieuxSupp.get(i).getNom(), SuppressionLieuxActivity.this);
             }catch (Exception e){
 
             }
@@ -102,7 +89,7 @@ public class SuppressionLieuxActivity extends AppCompatActivity {
 
     }
 
-    private void ajouterUnBouton(final String nom, final String lat, final String lon, final Context ctx){
+    private void ajouterUnBouton(final String nom, final Context ctx){
         Button btn = new Button(this);
         btn.setText(nom);
         btn.setBackground(getResources().getDrawable(R.drawable.design_btn_supp));
@@ -112,19 +99,18 @@ public class SuppressionLieuxActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String[] infos;
-                String aRetirer = "";
+                RepereLieux aRetirer = null;
 
                 //detection du boutons a supp
-                for (String str: lieuxSupp){
-                    infos = str.split("#");
-                    if (nom.equals(infos[0]) && lat.equals(infos[1]) && lon.equals(infos[2])){
+                for (RepereLieux str: MenuPrincipalActivity.listeLieux){
+                    if (nom.equals(str.getNom())){
                         aRetirer = str;
                     }
                 }
 
 
+                MenuPrincipalActivity.db.deleteLieu(aRetirer);
                 MenuPrincipalActivity.listeLieux.remove(aRetirer);
-                MenuPrincipalActivity.enregistrerLieux(ctx);
                 MenuPrincipalActivity.affichage(MenuPrincipalActivity.MenuContext);
                 finish();
 

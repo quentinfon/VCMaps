@@ -38,6 +38,7 @@
             </intent-filter>
         </activity>
         <activity android:name="fr.qfondev.vcmaps.vue.SuppressionLieuxActivity" />
+        <activity android:name="fr.qfondev.vcmaps.vue.AjoutGroupesActivity" />
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
             android:exported="false"

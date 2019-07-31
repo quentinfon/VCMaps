@@ -34,6 +34,8 @@ import java.util.Comparator;
 import java.util.List;
 
 import fr.qfondev.vcmaps.R;
+import fr.qfondev.vcmaps.modele.MyDatabaseHelper;
+import fr.qfondev.vcmaps.modele.RepereLieux;
 
 import static android.app.PendingIntent.getActivity;
 
@@ -45,8 +47,9 @@ public class MenuPrincipalActivity extends AppCompatActivity {
     private TextView test;
     private File mFile = null;
     public static final String FICHIER = "lieux.txt";
-    public static List<String> listeLieux;
+    public static List<RepereLieux> listeLieux;
     public static Context MenuContext;
+    public static MyDatabaseHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +60,10 @@ public class MenuPrincipalActivity extends AppCompatActivity {
         ajouterBtn = (ImageButton) findViewById(R.id.ajouterBtn);
         suppBtn = (ImageButton) findViewById(R.id.supprimerBtn);
         buttonContainer = (LinearLayout) findViewById(R.id.conteneurBtn);
-        listeLieux = new ArrayList<String>();
+        listeLieux = new ArrayList<RepereLieux>();
+
+        if(db == null)
+            db = new MyDatabaseHelper(this);
 
         mFile = new File(Environment.getExternalStorageDirectory().getPath() + "/Android/data/ " + getPackageName() + "/files/" + FICHIER);
 
@@ -84,20 +90,7 @@ public class MenuPrincipalActivity extends AppCompatActivity {
 
 
         /*Recuperation des lieux sauvegarder*/
-        try {
-            StringBuilder text = new StringBuilder();
-            FileInputStream fis = this.openFileInput(FICHIER);
-            BufferedReader br = new BufferedReader(new InputStreamReader(new BufferedInputStream(fis)));
-            String line;
-            while ((line = br.readLine()) != null) {
-                listeLieux.add(line);
-                System.out.println(line);
-            }
-            br.close();
-        }
-        catch (IOException e) {
-            e.printStackTrace();
-        }
+        listeLieux = db.getAllLieux();
 
 
         affichage(this);
@@ -107,37 +100,15 @@ public class MenuPrincipalActivity extends AppCompatActivity {
     }
 
     public static void trierAlphabetiquement(){
-        Collections.sort(listeLieux, new Comparator<String>() {
+        Collections.sort(listeLieux, new Comparator<RepereLieux>() {
             @Override
-            public int compare(String s1, String s2) {
-                return s1.compareToIgnoreCase(s2);
+            public int compare(final RepereLieux repere1, final RepereLieux repere2) {
+                return repere1.getNom().compareTo(repere2.getNom());
             }
         });
     }
 
 
-
-    public static void enregistrerLieux(Context ctx){
-
-        String tousLesLieux = "";
-        for(String lieu: MenuPrincipalActivity.listeLieux){
-            tousLesLieux += lieu;
-            tousLesLieux+="\n";
-        }
-
-        File mydir = ctx.getFilesDir(); //get your internal directory
-        File myFile = new File(mydir, FICHIER);
-        myFile.delete();
-
-        try {
-            FileOutputStream outputStream = ctx.openFileOutput(MenuPrincipalActivity.FICHIER, Context.MODE_PRIVATE);
-            outputStream.write(tousLesLieux.getBytes());
-            outputStream.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-    }
 
     public static void affichage(Context ctx){
 
@@ -146,10 +117,8 @@ public class MenuPrincipalActivity extends AppCompatActivity {
 
         for (int i = 0; i <listeLieux.size(); i++){
 
-            String[] infos = listeLieux.get(i).split("#");
-
             try{
-                ajouterUnBouton(infos[0], infos[1], infos[2], ctx);
+                ajouterUnBouton(listeLieux.get(i).getNom(), listeLieux.get(i).getLatitude(), listeLieux.get(i).getLongitude(), ctx);
             }catch (Exception e){
 
             }
@@ -157,7 +126,7 @@ public class MenuPrincipalActivity extends AppCompatActivity {
 
     }
 
-    public static void ajouterUnBouton(String nom, final String lat, final String lon, final Context ctx){
+    public static void ajouterUnBouton(String nom, final double lat, final double lon, final Context ctx){
         Button btn = new Button(ctx);
         btn.setTypeface(Typeface.SANS_SERIF);
         btn.setText(nom);

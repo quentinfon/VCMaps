@@ -13,11 +13,14 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.Spinner;
 import android.widget.Switch;
 
 import androidx.annotation.NonNull;
@@ -28,13 +31,19 @@ import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.SimpleTimeZone;
 
 import fr.qfondev.vcmaps.R;
+import fr.qfondev.vcmaps.modele.RepereLieux;
 
 public class AjoutLieuxActivity extends AppCompatActivity {
 
@@ -47,6 +56,11 @@ public class AjoutLieuxActivity extends AppCompatActivity {
     private LocationListener locationListener;
     private static Location position;
     private FusedLocationProviderClient fusedLocationClient;
+    public static Spinner listeGroupeW;
+    public static ArrayList<String> listeGroupes;
+    private Button ajoutGroupe;
+    public static final String FICHIERGOUPES = "groupes.txt";
+    public static Context ctx;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +73,10 @@ public class AjoutLieuxActivity extends AppCompatActivity {
         page = (LinearLayout) findViewById(R.id.pageCrea);
         utilisationGPS = (Switch) findViewById(R.id.positionGPS);
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
+        listeGroupeW = (Spinner) findViewById(R.id.listeGroupes);
+        ajoutGroupe = (Button) findViewById(R.id.btnNewGrp);
+        ctx = this;
+
 
 
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
@@ -86,7 +104,14 @@ public class AjoutLieuxActivity extends AppCompatActivity {
         };
 
 
+        ajoutGroupe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent grpAct = new Intent(AjoutLieuxActivity.this,AjoutGroupesActivity.class);
+                startActivity(grpAct);
+            }
 
+        });
 
         utilisationGPS.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -124,11 +149,14 @@ public class AjoutLieuxActivity extends AppCompatActivity {
                         }
 
                         String nomL = nomLieu.getText().toString();
-                        String nouvelleAdresse = nomL + "#" + position.getLatitude() + "#" + position.getLongitude();
-                        MenuPrincipalActivity.listeLieux.add(nouvelleAdresse);
 
-                        MenuPrincipalActivity.enregistrerLieux(MenuPrincipalActivity.MenuContext);
+
+                        RepereLieux nAdresse = new RepereLieux(nomL, position.getLatitude(), position.getLongitude(), "defaut");
+
+                        MenuPrincipalActivity.db.addRepere(nAdresse);
+                        MenuPrincipalActivity.listeLieux.add(nAdresse);
                         MenuPrincipalActivity.affichage(MenuPrincipalActivity.MenuContext);
+
                         finish();
                     } catch (Exception e) {
                     }
@@ -140,6 +168,71 @@ public class AjoutLieuxActivity extends AppCompatActivity {
             }
 
         });
+
+
+        initialisationGroupes(AjoutLieuxActivity.this);
+    }
+
+    public static void initialisationGroupes(Context ctx){
+
+        listeGroupes = new ArrayList<String>();
+
+        /*Recuperation des groupes sauvegarder*/
+        try {
+            StringBuilder text = new StringBuilder();
+            FileInputStream fis = ctx.openFileInput(FICHIERGOUPES);
+            BufferedReader br = new BufferedReader(new InputStreamReader(new BufferedInputStream(fis)));
+            String line;
+            while ((line = br.readLine()) != null) {
+
+                String groupNom = line;
+
+                listeGroupes.add(groupNom);
+
+            }
+            br.close();
+            fis.close();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        for (RepereLieux repere: MenuPrincipalActivity.listeLieux) {
+
+            if (listeGroupes.indexOf(repere.getGroupe()) == -1){
+                listeGroupes.add(repere.getGroupe());
+                System.out.println("Ajout de "+repere.getGroupe());
+            }
+
+        }
+
+        ArrayAdapter<String> adp = new ArrayAdapter<String>(ctx,
+                android.R.layout.simple_list_item_1, listeGroupes);
+        adp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        listeGroupeW.setAdapter(adp);
+
+    }
+
+    public static void enregistrerGroupes(Context ctx){
+
+        String tousLesGroupes = "";
+        for(String nomGrp: AjoutLieuxActivity.listeGroupes){
+            tousLesGroupes += nomGrp;
+            tousLesGroupes+="\n";
+        }
+
+        File mydir = ctx.getFilesDir(); //get your internal directory
+        File myFile = new File(mydir, FICHIERGOUPES);
+        myFile.delete();
+
+        try {
+            FileOutputStream outputStream = ctx.openFileOutput(MenuPrincipalActivity.FICHIER, Context.MODE_PRIVATE);
+            outputStream.write(tousLesGroupes.getBytes());
+            outputStream.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
     public void requeteGPS() {
@@ -179,10 +272,11 @@ public class AjoutLieuxActivity extends AppCompatActivity {
         if(list.size()>0){
             Address adresse = list.get(0);
 
-            String nouvelleAdresse = nomL+"#"+adresse.getLatitude()+"#"+adresse.getLongitude();
-            MenuPrincipalActivity.listeLieux.add(nouvelleAdresse);
+            RepereLieux nAdresse = new RepereLieux(nomL, adresse.getLatitude(),adresse.getLongitude(), "defaut");
 
-            MenuPrincipalActivity.enregistrerLieux(this);
+            MenuPrincipalActivity.listeLieux.add(nAdresse);
+
+            MenuPrincipalActivity.db.addRepere(nAdresse);
             MenuPrincipalActivity.affichage(MenuPrincipalActivity.MenuContext);
             finish();
 

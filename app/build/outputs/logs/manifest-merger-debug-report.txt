@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:2:1-36:12
+ADDED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:2:1-37:12
+INJECTED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:2:1-37:12
+INJECTED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:2:1-37:12
+INJECTED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:2:1-37:12
 MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\23e7592079a423368328b172be8a97d1\appcompat-1.0.2\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-location:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\2656194884b393359231103f086d1ff1\play-services-location-17.0.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\dad44d13e41bee5d6081e831544cc991\play-services-base-17.0.0\AndroidManifest.xml:17:1-29:12
@@ -35,20 +35,20 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Quent\.gradle
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\9c58b200899a47e839086a435f1e7d30\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\b2df145f86f645462bd23edcb3a2c570\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\c2c3c0fa879562a9c8d71f77ba3bc154\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:2:1-36:12
-INJECTED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:2:1-37:12
+INJECTED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:2:1-37:12
+INJECTED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:2:1-37:12
 	package
 		ADDED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:3:5-32
 		INJECTED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:2:1-36:12
+		ADDED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:2:1-37:12
 		INJECTED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:2:1-36:12
+		ADDED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:2:1-37:12
 		INJECTED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:2:11-69
@@ -65,7 +65,7 @@ ADDED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManif
 	android:name
 		ADDED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:7:22-78
 application
-ADDED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:9:5-35:19
+ADDED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:9:5-36:19
 MERGED from [com.google.android.gms:play-services-location:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\2656194884b393359231103f086d1ff1\play-services-location-17.0.0\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-location:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\2656194884b393359231103f086d1ff1\play-services-location-17.0.0\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\dad44d13e41bee5d6081e831544cc991\play-services-base-17.0.0\AndroidManifest.xml:22:5-27:19
@@ -128,6 +128,10 @@ activity#fr.qfondev.vcmaps.vue.SuppressionLieuxActivity
 ADDED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:33:9-65
 	android:name
 		ADDED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:33:19-63
+activity#fr.qfondev.vcmaps.vue.AjoutGroupesActivity
+ADDED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:34:9-61
+	android:name
+		ADDED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml:34:19-59
 uses-sdk
 INJECTED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Quent\AndroidStudioProjects\VCMaps\app\src\main\AndroidManifest.xml
