@@ -9,7 +9,7 @@ MERGED from [com.google.android.gms:play-services-location:17.0.0] C:\Users\Quen
 MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\dad44d13e41bee5d6081e831544cc991\play-services-base-17.0.0\AndroidManifest.xml:17:1-29:12
 MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\06545a0abb0010d772574fe68e17e520\play-services-places-placereport-17.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\97b67b5a0863791093f4249fd68231e9\play-services-tasks-17.0.0\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\8a496b107e1a1a2fef9d8cb5cc3a4b85\jetified-play-services-basement-17.0.0\AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\05f615412a7be53a00ff22b36f0a1bf1\jetified-play-services-basement-17.0.0\AndroidManifest.xml:17:1-28:12
 MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\ccc74c742644d2e00519524c64a1f929\fragment-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\b77f1ce4da7c6aeffd2762bb56ae5c3b\vectordrawable-animated-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\ea68ebbb6c36e9f385bdaf784697c436\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -74,8 +74,8 @@ MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] C:\
 MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\06545a0abb0010d772574fe68e17e520\play-services-places-placereport-17.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\97b67b5a0863791093f4249fd68231e9\play-services-tasks-17.0.0\AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\97b67b5a0863791093f4249fd68231e9\play-services-tasks-17.0.0\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\8a496b107e1a1a2fef9d8cb5cc3a4b85\jetified-play-services-basement-17.0.0\AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\8a496b107e1a1a2fef9d8cb5cc3a4b85\jetified-play-services-basement-17.0.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\05f615412a7be53a00ff22b36f0a1bf1\jetified-play-services-basement-17.0.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\05f615412a7be53a00ff22b36f0a1bf1\jetified-play-services-basement-17.0.0\AndroidManifest.xml:22:5-26:19
 MERGED from [androidx.core:core:1.0.1] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\848d7ae98cf87e77632ecc4f8c64694e\core-1.0.1\AndroidManifest.xml:22:5-89
 MERGED from [androidx.core:core:1.0.1] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\848d7ae98cf87e77632ecc4f8c64694e\core-1.0.1\AndroidManifest.xml:22:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\954f1ff03006b985b44208fac51c8145\versionedparcelable-1.0.0\AndroidManifest.xml:22:5-23:19
@@ -146,8 +146,8 @@ MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] C:\
 MERGED from [com.google.android.gms:play-services-places-placereport:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\06545a0abb0010d772574fe68e17e520\play-services-places-placereport-17.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\97b67b5a0863791093f4249fd68231e9\play-services-tasks-17.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\97b67b5a0863791093f4249fd68231e9\play-services-tasks-17.0.0\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\8a496b107e1a1a2fef9d8cb5cc3a4b85\jetified-play-services-basement-17.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\8a496b107e1a1a2fef9d8cb5cc3a4b85\jetified-play-services-basement-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\05f615412a7be53a00ff22b36f0a1bf1\jetified-play-services-basement-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\05f615412a7be53a00ff22b36f0a1bf1\jetified-play-services-basement-17.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\ccc74c742644d2e00519524c64a1f929\fragment-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\ccc74c742644d2e00519524c64a1f929\fragment-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\b77f1ce4da7c6aeffd2762bb56ae5c3b\vectordrawable-animated-1.0.0\AndroidManifest.xml:20:5-44
@@ -217,8 +217,8 @@ ADDED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\Quent\.gr
 	android:name
 		ADDED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\dad44d13e41bee5d6081e831544cc991\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\8a496b107e1a1a2fef9d8cb5cc3a4b85\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\05f615412a7be53a00ff22b36f0a1bf1\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\8a496b107e1a1a2fef9d8cb5cc3a4b85\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\05f615412a7be53a00ff22b36f0a1bf1\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\8a496b107e1a1a2fef9d8cb5cc3a4b85\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\Quent\.gradle\caches\transforms-2\files-2.1\05f615412a7be53a00ff22b36f0a1bf1\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58

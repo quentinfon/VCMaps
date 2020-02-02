@@ -91,6 +91,7 @@ public class SuppressionLieuxActivity extends AppCompatActivity {
 
     private void ajouterUnBouton(final String nom, final Context ctx){
         Button btn = new Button(this);
+        btn.setTextColor(this.getResources().getColor(R.color.rougeSupp));
         btn.setText(nom);
         btn.setBackground(getResources().getDrawable(R.drawable.design_btn_supp));
         btn.setTextSize(30);

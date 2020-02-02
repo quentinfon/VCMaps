@@ -35,7 +35,7 @@ public class AjoutGroupesActivity extends AppCompatActivity {
                     GroupeRepere grp = new GroupeRepere(nomGroupeWidget.getText().toString());
 
                     AjoutLieuxActivity.listeGroupes.add(grp);
-                    MenuPrincipalActivity.groupeBd.addGroupe(grp);
+                    MenuPrincipalActivity.db.addGroupe(grp);
                     AjoutLieuxActivity.initialisationGroupes();
                     finish();
                 }

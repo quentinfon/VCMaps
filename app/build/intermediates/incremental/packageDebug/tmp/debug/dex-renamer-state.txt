@@ -1,4 +1,4 @@
-#Wed Jul 31 21:56:40 CEST 2019
+#Thu Aug 01 18:48:00 CEST 2019
 base.0=C\:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex

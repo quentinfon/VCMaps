@@ -181,12 +181,12 @@ public class AjoutLieuxActivity extends AppCompatActivity {
         nomGrp = new ArrayList<String>();
 
         /*Recuperation des groupes sauvegarder*/
-        listeGroupes = MenuPrincipalActivity.groupeBd.getAllGroupes();
+        listeGroupes = MenuPrincipalActivity.db.getAllGroupes();
 
         for (GroupeRepere gR: listeGroupes){
+            System.out.println("CRECERfgergergergerger g erger ger");
             nomGrp.add(gR.getNom());
         }
-
 
         ArrayAdapter<String> adp = new ArrayAdapter<String>(AjoutLieuxActivity.ctx,
                 android.R.layout.simple_list_item_1, nomGrp);

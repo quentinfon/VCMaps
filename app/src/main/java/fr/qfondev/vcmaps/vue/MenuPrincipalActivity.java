@@ -17,7 +17,6 @@ import java.util.Comparator;
 import java.util.List;
 
 import fr.qfondev.vcmaps.R;
-import fr.qfondev.vcmaps.modele.GroupeBDD;
 import fr.qfondev.vcmaps.modele.MyDatabaseHelper;
 import fr.qfondev.vcmaps.modele.RepereLieux;
 
@@ -31,7 +30,6 @@ public class MenuPrincipalActivity extends AppCompatActivity {
     public static List<RepereLieux> listeLieux;
     public static Context MenuContext;
     public static MyDatabaseHelper db;
-    public static GroupeBDD groupeBd;
 
 
     @Override
@@ -48,8 +46,6 @@ public class MenuPrincipalActivity extends AppCompatActivity {
         /*Definition des Bases de donées*/
         if(db == null)
             db = new MyDatabaseHelper(this);
-        if(groupeBd == null)
-            groupeBd = new GroupeBDD(this);
 
 
 
@@ -114,6 +110,7 @@ public class MenuPrincipalActivity extends AppCompatActivity {
     public static void ajouterUnBouton(String nom, final double lat, final double lon, final Context ctx){
         Button btn = new Button(ctx);
         btn.setTypeface(Typeface.SANS_SERIF);
+        btn.setTextColor(ctx.getResources().getColor(R.color.grisF));
         btn.setText(nom);
         btn.setBackground(ctx.getResources().getDrawable(R.drawable.design_btn));
         btn.setTextSize(30);

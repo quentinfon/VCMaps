@@ -8,12 +8,12 @@
         "source": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_navigation.png.flat",
-        "source": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_navigation.png"
-    },
-    {
         "merged": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\build\\intermediates\\res\\merged\\debug\\anim_fade_in.xml.flat",
         "source": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\src\\main\\res\\anim\\fade_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_navigation.png.flat",
+        "source": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_navigation.png"
     },
     {
         "merged": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_loupe.png.flat",
@@ -28,12 +28,12 @@
         "source": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\src\\main\\res\\mipmap-xhdpi\\ic_plus.png"
     },
     {
-        "merged": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_validation.png.flat",
-        "source": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_validation.png"
-    },
-    {
         "merged": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_validation.png.flat",
+        "source": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_validation.png"
     },
     {
         "merged": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_home.xml.flat",
@@ -68,12 +68,12 @@
         "source": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
-    },
-    {
         "merged": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_validation.png.flat",
         "source": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\src\\main\\res\\mipmap-mdpi\\ic_validation.png"
+    },
+    {
+        "merged": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
     },
     {
         "merged": "C:\\Users\\Quent\\AndroidStudioProjects\\VCMaps\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_foreground.png.flat",
