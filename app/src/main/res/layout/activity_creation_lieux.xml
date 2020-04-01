@@ -6,116 +6,128 @@
     android:background="@color/fond"
     android:id="@+id/pageCrea">
 
-    <TextView
-        android:id="@+id/nomLieuTxt"
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Nom du lieu :"
-        android:textSize="@dimen/titre"
-        android:textAlignment="center"
-        android:layout_marginTop="75dp"
-        android:layout_marginBottom="15dp"/>
+        android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/nomLieu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Entrez un nom"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:textAlignment="center"/>
-
-    <TextView
-        android:id="@+id/lieuTxt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Lieu :"
-        android:textSize="@dimen/titre"
-        android:textAlignment="center"
-        android:layout_marginTop="45dp"
-        android:layout_marginBottom="15dp"/>
-
-    <Switch
-        android:id="@+id/positionGPS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Utiliser ma position "
-        android:layout_gravity="center"/>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/white_border"
-        android:elevation="10dp"
-        android:id="@+id/barreDeRecherche">
-
-        <ImageView
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:id="@+id/ic_loupe"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"
-            android:src="@drawable/ic_loupe"/>
-
-        <EditText
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_toRightOf="@+id/ic_loupe"
-            android:layout_centerVertical="true"
-            android:textSize="15sp"
-            android:textColor="@color/grisF"
-            android:id="@+id/input_rechercheLieu"
-            android:hint="Entrez une Adresse, Ville ou Code Postal"
-            android:paddingLeft="10dp"
-            android:imeOptions="actionSearch"/>
-
-    </RelativeLayout>
-
-    <TextView
-        android:id="@+id/groupeTxt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Groupe :"
-        android:textSize="@dimen/titre"
-        android:textAlignment="center"
-        android:layout_marginTop="45dp"
-        android:layout_marginBottom="15dp"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Spinner
-            android:id="@+id/listeGroupes"
-            android:layout_width="325dp"
-            android:layout_height="match_parent"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:id="@+id/btnNewGrp"
             android:layout_height="wrap_content"
-            android:text="+"
-            android:textSize="25dp"></Button>
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nomLieuTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nom du lieu :"
+                android:textSize="@dimen/titre"
+                android:textAlignment="center"
+                android:layout_marginTop="75dp"
+                android:layout_marginBottom="15dp"/>
+
+            <EditText
+                android:id="@+id/nomLieu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Entrez un nom"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/lieuTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lieu :"
+                android:textSize="@dimen/titre"
+                android:textAlignment="center"
+                android:layout_marginTop="45dp"
+                android:layout_marginBottom="15dp"/>
+
+            <Switch
+                android:id="@+id/positionGPS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Utiliser ma position "
+                android:layout_gravity="center"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/white_border"
+                android:elevation="10dp"
+                android:id="@+id/barreDeRecherche">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:id="@+id/ic_loupe"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_loupe"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/ic_loupe"
+                    android:layout_centerVertical="true"
+                    android:textSize="15sp"
+                    android:textColor="@color/grisF"
+                    android:id="@+id/input_rechercheLieu"
+                    android:hint="Entrez une Adresse, Ville ou Code Postal"
+                    android:paddingLeft="10dp"
+                    android:imeOptions="actionSearch"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/groupeTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Groupe :"
+                android:textSize="@dimen/titre"
+                android:textAlignment="center"
+                android:layout_marginTop="45dp"
+                android:layout_marginBottom="15dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/listeGroupes"
+                    android:layout_width="325dp"
+                    android:layout_height="match_parent"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:id="@+id/btnNewGrp"
+                    android:layout_height="wrap_content"
+                    android:text="+"
+                    android:textSize="25dp"></Button>
 
 
-    </LinearLayout>
+            </LinearLayout>
 
-    <ImageButton
-        android:id="@+id/imgValidation"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:adjustViewBounds="true"
-        android:background="@color/fond"
-        android:scaleType="fitCenter"
-        android:layout_marginTop="50dp"
-        app:srcCompat="@mipmap/ic_validation"/>
+            <ImageButton
+                android:id="@+id/imgValidation"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:background="@color/fond"
+                android:scaleType="fitCenter"
+                android:layout_marginTop="50dp"
+                app:srcCompat="@mipmap/ic_validation"/>
+
+        </LinearLayout>
+    </ScrollView>
 
 
 </LinearLayout>
