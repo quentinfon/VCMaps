@@ -184,7 +184,7 @@ public class AjoutLieuxActivity extends AppCompatActivity {
         listeGroupes = MenuPrincipalActivity.db.getAllGroupes();
 
         for (GroupeRepere gR: listeGroupes){
-            System.out.println("CRECERfgergergergerger g erger ger");
+
             nomGrp.add(gR.getNom());
         }
 
